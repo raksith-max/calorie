@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #16231b;
+  --color-paper: #f2f5ef;
+  --color-leaf: #3b7a4b;
+  --color-turmeric: #e7a81b;
+  --color-chilli: #c23b2e;
+  --color-line: #d5ddce;
+  --color-mute: #5f6d60;
+  --font-sans: "Bricolage Grotesque", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+html, body { background: var(--color-paper); color: var(--color-ink); font-family: var(--font-sans); }
+body { padding-top: env(safe-area-inset-top); -webkit-tap-highlight-color: transparent; }
+input, select, textarea, button { font: inherit; }
+/* 16px stops iPhone Safari from zooming in when a field is focused */
+input, select, textarea { font-size: 16px; }
+button { touch-action: manipulation; }
+html { -webkit-text-size-adjust: 100%; overscroll-behavior-y: none; }
+:focus-visible { outline: 2px solid var(--color-leaf); outline-offset: 2px; }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
